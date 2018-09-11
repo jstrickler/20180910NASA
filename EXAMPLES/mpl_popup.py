@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 #
-
-
 import matplotlib
 matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 import seaborn as sbs
 
-# sbs.set_style('darkgrid')
+sbs.set_style('darkgrid')
 import numpy as np
 from numpy.random import rand
 
