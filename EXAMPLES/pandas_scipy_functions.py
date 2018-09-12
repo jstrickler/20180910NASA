@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 import pandas as pd
 from printheader import print_header
-import scipy as sp
-from functools import partial
-from scipy.signal import resample
 
 cols = ['alpha','beta','gamma','delta','epsilon'] # <1>
 index = ['a','b','c','d','e','f'] # <2>
@@ -18,19 +15,25 @@ values = [ # <3>
 ]
 
 df = pd.DataFrame(values, index=index, columns=cols)  # <4>
+print_header('DataFrame df')
+print(df, '\n')
 
-print(df)
+print_header("df['alpha']")
+print(df['alpha'], '\n')   # <5>
 
-def cube(x):
-    return x ** 3
+print_header("df.alpha")
+print(df.alpha, '\n') # <6>
 
-x = cube(df)
+print_header("df['b':'e']")
+print(df['b':'e'], '\n')  # <7>
 
-print(x)
+print_header("df[['alpha','epsilon','beta']]")
+print(df[['alpha','epsilon','beta']]) # <8>
+print()
 
-print(type(x))
 
-y = df.apply(resample, args=(3,), broadcast=True)
-print(y)
-print(type(y))
+print_header("df[['alpha','epsilon','beta']]['b':'e']")
+print(df[['alpha','epsilon','beta']]['b':'e']) # <9>
+print()
+
 

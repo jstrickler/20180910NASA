@@ -10,6 +10,7 @@ y_values = [math.cos(i) for i in x_values]
 fig = plt.figure()
 
 plt.plot(x_values, y_values)
+plt.xlabel("CROSSING MY FINGERS")
 
 with open('saved_plot.fig', 'wb') as fig_out:
     pickle.dump(fig, fig_out)
