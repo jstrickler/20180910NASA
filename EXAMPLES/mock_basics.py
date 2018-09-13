@@ -3,6 +3,7 @@
 import unittest
 from unittest.mock import Mock
 
+
 ham = Mock()  # <1>
 
 # system under test

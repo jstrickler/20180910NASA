@@ -7,22 +7,14 @@ people = zip(names, states)
 
 print(people)
 
+print("First Try:")
 for person in people:
     print(person)
 print()
 
-# people = zip(names, states)
+print("Second Try:")
+for person in people:
+    print(person)
+print()
 
-for name, state in zip(names, states):
-    print(f"{name} is from {state}")
-
-people = zip(names, states)
-
-print(list(people))
-
-my_dict = dict(zip(names, states))
-
-print(my_dict)
-
-print(list(my_dict.items()))
-
+print(people)

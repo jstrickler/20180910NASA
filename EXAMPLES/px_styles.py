@@ -15,7 +15,7 @@ def update_last_names(ws):
     for row in ws['B2:B46']:
         cell = row[0]
         cell.value = cell.value.upper()
-        cell.font = px.styles.Font(color='FF0000FF')
+        cell.font = px.styles.Font(color='FF0000FF', name='comic sans')
 
 if __name__ == '__main__':
     main()

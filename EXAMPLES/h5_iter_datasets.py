@@ -10,6 +10,8 @@ hfile = h5py.File(H5_FILE) # <1>
 
 dset = hfile[H5_DATASET]  # <2>
 
+print(dset.dtype)
+
 for i, row in enumerate(dset):  # <3>
     print("ROW {}: {}".format(i, row)) # <4>
 print()

@@ -12,7 +12,7 @@ with h5py.File(H5_FILE) as hfile: # <1>
     print()
 
     print('datasets in /arrays:')
-    for dataset in hfile['arrays']: # <3>
+    for dataset in hfile['/arrays']: # <3>
         print(dataset)
 
     print('-' * 60)
